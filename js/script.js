@@ -43,20 +43,48 @@ next.addEventListener('click', function(){
     //incremento il suo valore di 1
     //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
     //stessa cosa per i cerchi
-    for(let i = 0; i < imagesArray.length; i++){
-        itemActive = itemActive + imagesArray[i]
-        console.log(itemActive)
 
+    //Vado a cambiare nome alla variabile in modo tale da poi poter togliere la classe active e aggiungerla all'altra
+
+    const lastActiveItem = items[itemActive]
+    const lastCircleActive = circles[itemActive]
+
+    // se itemActive è a 4 ==> itemactive = 0
+    // altrimenti ==> itemActive = itemActive + 1
+
+    if(itemActive == (items.length - 1)){
+       
+        itemActive = 0
     }
+    else{
+        
+        itemActive = itemActive + 1;
+    }
+    
+    const ActiveItem = items[itemActive]
+    const CircleActive = circles[itemActive]
+
+    // aggiungo e rimuovo la classe active
+
+    ActiveItem.classList.add('active')
+    lastActiveItem.classList.remove('active')
+
+    CircleActive.classList.add('active')
+    lastCircleActive.classList.remove('active')
 
 
-});
+})
+
 
 prev.addEventListener('click', function(){
     //verifico l'elemento attivo (itemActive)
     //decremento il suo valore di 1
     //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
     //stessa cosa per i cerchi
+
+
+    const lastActiveItem = items[itemActive]
+
 })
 
 

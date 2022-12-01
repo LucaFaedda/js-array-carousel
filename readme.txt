@@ -10,6 +10,7 @@ Consigli del giorno:
 
 
 
-1 - per prima cosa creo un ciclo for dentro eventerlistener
-2 - creo un ciclo if and else
-3 - aggiungo elemento active e tolgo al precendente
+1 - verifico elemento con console log
+2 - lo aumento di uno?
+3 - creo un ciclo if and else
+4 - assegno la classe active a quello aumentato
