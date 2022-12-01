@@ -84,6 +84,26 @@ prev.addEventListener('click', function(){
 
 
     const lastActiveItem = items[itemActive]
+    const lastCircleActive = circles[itemActive]
+
+    if(itemActive == 0){
+       
+        itemActive = items.length - 1
+    }
+    else{
+        
+        itemActive = itemActive - 1;
+    }
+    
+
+    const ActiveItem = items[itemActive]
+    const CircleActive = circles[itemActive]
+
+    ActiveItem.classList.add('active')
+    lastActiveItem.classList.remove('active')
+
+    CircleActive.classList.add('active')
+    lastCircleActive.classList.remove('active')
 
 })
 
